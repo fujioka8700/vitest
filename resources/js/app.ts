@@ -1,4 +1,4 @@
 import "./bootstrap";
 import { hello } from "./utils";
 
-console.log(hello("花子"));
+console.log(hello("太郎"));
