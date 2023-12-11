@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
-        "type:check": "vue-tsc --noEmit"
+        "type:check": "vue-tsc --noEmit",
+        "test": "jest"
     },
     "devDependencies": {
         "@types/jest": "^29.5.11",
