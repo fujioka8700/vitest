@@ -4,10 +4,12 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vue-tsc --noEmit && vite build",
         "type:check": "vue-tsc --noEmit",
-        "test": "jest",
-        "vitest": "vitest"
+        "build": "vue-tsc --noEmit && vite build",
+        "jest:check": "jest",
+        "jest": "jest --watchAll",
+        "vitest:check": "vitest run",
+        "vitest": "vitest watch"
     },
     "devDependencies": {
         "@testing-library/vue": "^8.0.1",
