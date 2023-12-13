@@ -46,7 +46,7 @@ jobs:
               run: chmod -R 777 storage bootstrap/cache
 
             - name: cache node_modules
-              id: cache
+              id: cache_node
               uses: actions/cache@v3
               with:
                   path: ./node_modules
@@ -55,7 +55,7 @@ jobs:
                       ${{ runner.os }}-package-
 
             - name: npm install
-              if: steps.cache.outputs.cache-hit != 'true'
+              if: steps.cache_node.outputs.cache_node-hit != 'true'
               run: |
                   npm ci
                   npm run build
