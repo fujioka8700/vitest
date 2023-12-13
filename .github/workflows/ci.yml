@@ -73,4 +73,6 @@ jobs:
               run: vendor/bin/phpunit
 
             - name: vitest test
-              run: LARAVEL_BYPASS_ENV_CHECK=1 npm run vitest:check
+              env:
+                  LARAVEL_BYPASS_ENV_CHECK: 1
+              run: npm run vitest:check
