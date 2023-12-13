@@ -56,9 +56,10 @@ jobs:
 
             - name: npm install
               if: steps.cache_node.outputs.cache-hit != 'true'
-              run: |
-                  npm ci
-                  npm run build
+              run: npm ci
+
+            - name: npm build
+              run: npm run build
 
             - name: Create Database
               run: |
