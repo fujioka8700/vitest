@@ -55,7 +55,7 @@ jobs:
                       ${{ runner.os }}-package-
 
             - name: npm install
-              if: steps.cache_node.outputs.cache_node-hit != 'true'
+              if: steps.cache_node.outputs.cache-hit != 'true'
               run: |
                   npm ci
                   npm run build
